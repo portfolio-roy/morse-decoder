@@ -30,9 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Morse Decoder] <a name="about-project"></a>
+# 📖 Morse Decoder <a name="about-project"></a>
 
-**[Morse Decoder]** is command line application built with rudy to decode morse code
+**Morse Decoder** is command line application built with rudy to decode morse code
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -88,8 +88,6 @@ Install inters for this project with:
   cd morse-decoder
   bundle install
 ```
-
---->
 
 ### Usage
 
