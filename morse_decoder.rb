@@ -37,6 +37,8 @@ MORSE_CODE = {
   '----.' => '9'
 }.freeze
 
+# Decode
+# ======
 def decode_char(morse_char)
   MORSE_CODE[morse_char]
 end
@@ -49,7 +51,24 @@ def decode(message)
   message.split('   ').map { |morse_word| decode_word(morse_word) }.join(' ')
 end
 
+# Encode
+# ======
+MORSE_CODE_REVERSE = MORSE_CODE.invert.freeze
+def encode_char(char)
+  MORSE_CODE_REVERSE[char.upcase]
+end
+
+def encode_word(word)
+  word.chars.map { |char| encode_char(char) }.join(' ')
+end
+
+def encode(message)
+  message.split.map { |word| encode_word(word) }.join('   ')
+end
+
 # Example:
 # irb -r ./morse_decoder.rb
-#  :001 > decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+#  > decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
 #  => "A BOX FULL OF RUBIES"
+# > encode("A BOX FULL OF RUBIES")
+# => ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..." 
