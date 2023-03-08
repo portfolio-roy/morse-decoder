@@ -50,6 +50,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Decode morse code**
+- **Encode text message to morse code**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,7 +98,7 @@ To run the project, execute the following command:
   irb -r ./morse_decoder.rb
 ```
 
-> To decode a message:
+#### To decode a message:
 
 ```sh
   decode(<youre_morse_code>)
@@ -106,8 +107,21 @@ To run the project, execute the following command:
 Example:
 
 ```sh
-  decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+   > decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
    => "A BOX FULL OF RUBIES"
+```
+
+#### To encode a message:
+
+```sh
+  encode(<youre_text>)
+```
+
+Example:
+
+```sh
+  > encode("A BOX FULL OF RUBIES")
+ => ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,7 +158,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Encode tex message to morse code**
+- [ ] **N/A**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
