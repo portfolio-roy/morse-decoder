@@ -41,6 +41,10 @@ def decode_char(morse_char)
   MORSE_CODE[morse_char]
 end
 
+def decode(message)
+  message.split('   ').map { |morse_word| decode_word(morse_word) }.join(' ')
+end
+
 # Example:
 # irb -r ./morse_decoder.rb
 #  :001 > decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
